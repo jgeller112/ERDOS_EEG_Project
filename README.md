@@ -1,5 +1,3 @@
 # ERDOS_EEG_Project
 
-Analysis is based on a EEG Database Data Set originally created for Kaggle. It contains EEG (Electroencephalography) data for two groups - Alcoholics and Controls. 
-
- Each subject was exposed to either a single stimulus (S1) or to two stimuli (S1 and S2) which were pictures of objects chosen from the 1980 Snodgrass and Vanderwart picture set. When two stimuli were shown, they were presented in either a matched condition where S1 was identical to S2 or in a non-matched condition where S1 differed from S2.
+EEG Database on UCI website contains 64-channel electroencephalography (EEG) data from alcoholic and control subjects participating in a visual event-related potential (ERP) experiment. Subjects were exposed to three experimental conditions: S1 single visual stimulus, S2m two matching visual stimuli, S2n two non-matching visual stimuli. Each subject participated in multiple trials (replications) of each experimental condition. Data were recorded at 256 Hz for 1 second following the presentation of the visual stimulus/stimuli.
