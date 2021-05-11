@@ -1,0 +1,62 @@
+---
+title: "EEG Data Notebook_JG"
+output: html_notebook
+---
+
+Man is this data a nightmare to work with! Luckily the `eegkitdata` package in R has us covered! It has the training data storeed for us. ALl we have to grab is the training data. 
+
+```{r}
+library("reticulate") # use Python in R envior
+library("data.table") # read in large files more quickly
+
+use_python('/Users/jgeller1/opt/anaconda3/bin/python') # path to Python 
+
+```
+
+# This gets the training data
+```{r}
+library(eegkitdata)
+library(knitr)
+library(kableExtra)
+
+train_eeg=data(eegdata) # train data
+
+kable(head(train_eeg))
+```
+ This gets the test data 
+```{r, eval=FALSE}
+
+#Download the SMNI test data, unzip it, and combine
+eegS1=geteegdata(indir=here::here("EEG_test", "SMNI_CMI_Test/"),
+ cond="S1",filename="eegtestS1") # path to where the test data is stored
+
+eegS2m=geteegdata(indir=here::here("EEG_test", "SMNI_CMI_Test/"),
+ cond="S2m",filename="eegtestS2m")
+ 
+eegS2n=geteegdata(indir=here::here("EEG_test", "SMNI_CMI_Test/"),
+ cond="S2n",filename="eegtestS2n")
+ 
+eegdata=rbind(eegS1,eegS2m,eegS2n)
+```
+
+```{r}
+
+# let's load in the testing df
+
+test_eeg <- fread(here::here("eeg_test.csv"))
+
+head(test_eeg)
+
+
+```
+
+
+
+```{python}
+import mne #main EEG visualization package
+import pandas as pd
+```
+
+
+
+
