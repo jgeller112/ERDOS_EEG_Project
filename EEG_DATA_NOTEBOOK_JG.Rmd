@@ -18,10 +18,27 @@ use_python('/Users/jgeller1/opt/anaconda3/bin/python') # path to Python
 library(eegkitdata)
 library(knitr)
 library(kableExtra)
+library(tidyverse)
 
-train_eeg=data(eegdata) # train data
+train <- read_csv(here::here("EEG_train", "eegdata_train.csv.zip")) 
 
-kable(head(train_eeg))
+
+kable(head(train))
+
+
+train <- train %>%
+        group_by(subject, trial, channel) %>% 
+        mutate(time_ms=seq(0,1000, by=3.91)) # get ms EEG samples at 3.91 milliseconds
+
+```
+
+```{r}
+train %>%
+        ggplot(aes(x=time_ms, y=voltage)) + 
+        stat_summary(fun = "mean", geom = "line", alpha = 1, size = 1.5,
+    aes(color = condition)) + 
+            facet_grid(~group)
+
 ```
  This gets the test data 
 ```{r, eval=FALSE}
