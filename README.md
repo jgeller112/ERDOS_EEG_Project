@@ -5,6 +5,6 @@ EEG Database on UCI website contains 64-channel electroencephalography (EEG) dat
 
 # Figure 1 
 
-Grand-avergae across subjects and electrodes for each of the three conditions. 
+Grand-average across subjects and electrodes for each of the three conditions. 
 
 ![image](https://user-images.githubusercontent.com/18429968/118040716-eb7bc200-b33f-11eb-8275-159c13fb5002.png)
