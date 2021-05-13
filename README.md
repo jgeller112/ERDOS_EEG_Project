@@ -21,3 +21,9 @@ Grand-average across subjects and trials for each of the three conditions at 3 e
 
 
 From above it seems like we should focus on the CZ channel and extract features either from the whole time course or just a slice of time (P300). 
+
+
+
+
+
+
