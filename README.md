@@ -33,6 +33,10 @@ Grand-average across subjects and trials for each of the three conditions at 3 e
 
 From above it seems like we should focus on the CZ channel and extract features either from the whole time course or just a slice of time (P300). 
 
+# Figure 3
+
+Correlation matrix betwenn electrodes' voltage for a single trial, for a partcipant belonging to the control group and an alcoholic respectively.
+
 
 
 
