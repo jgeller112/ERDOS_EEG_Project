@@ -13,7 +13,7 @@ use_python('/Users/jgeller1/opt/anaconda3/bin/python') # path to Python
 
 ```
 
-# This gets the training data
+# This gets the training data and does some light tidying: turn time in ms, filters out X and Y channels (no clue what they are)
 ```{r}
 library(eegkitdata)
 library(knitr)
@@ -28,7 +28,13 @@ kable(head(train))
 
 train <- train %>%
         group_by(subject, trial, channel) %>% 
-        mutate(time_ms=seq(0,1000, by=3.91)) # get ms EEG samples at 3.91 milliseconds
+        mutate(time_ms=seq(0,1000, by=3.91)) %>% # get ms EEG samples at 3.91 milliseconds 
+ungroup()%>%
+    dplyr::filter(channel!="X" | channel!="Y") # no clue what X and Y are 
+
+count(train, channel)
+
+
 
 ```
 
@@ -72,6 +78,20 @@ head(test_eeg)
 ```{python}
 import mne #main EEG visualization package
 import pandas as pd
+import seaborn as sns
+
+
+r.train
+
+r.head()
+```
+
+```{python}
+import matplotlib.pyplot as plt
+
+sns.relplot(x="time", y="voltage", kind="line", hue="condition", col="group", data=r.train)
+
+plt.show()
 ```
 
 
