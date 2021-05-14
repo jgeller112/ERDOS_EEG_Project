@@ -1,2 +1,4 @@
 eeg_test.csv
 eegdata_train.csv
+__pycache__
+*ipynb_checkpoints*
