@@ -4,7 +4,7 @@ This project is going to look for EEG biomarkers of alcholism. The EEG Database 
 
 # Stakeholders
 
-Clinicans?
+Clinicians
 
 
 # Figure 1 
