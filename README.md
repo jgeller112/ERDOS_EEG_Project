@@ -38,7 +38,7 @@ From above it seems like we should focus on the CZ channel and extract features 
 Correlation matrix betwenn electrodes' voltage for a single trial, for a partcipant belonging to the control group and an alcoholic respectively.
 
 
-![c337_000](https://user-images.githubusercontent.com/20558980/118339267-50711c80-b4e6-11eb-9351-b6d029952018.png)
-![a364_000](https://user-images.githubusercontent.com/20558980/118339269-51a24980-b4e6-11eb-8bf4-fc4ec94e7088.png)
+![c337_000](https://user-images.githubusercontent.com/20558980/118339267-50711c80-b4e6-11eb-9351-b6d029952018.png =250x250)
+![a364_000](https://user-images.githubusercontent.com/20558980/118339269-51a24980-b4e6-11eb-8bf4-fc4ec94e7088.png =250x250)
 
 
