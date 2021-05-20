@@ -57,17 +57,20 @@ List of features:
 
 Time Domain Features
  
-Mean
-Standard Deviation
-Power
+- Mean
+- Standard Deviation
+- Power
+
 Frequency Domain Features
 
-Band Power
-Spectral Entropy
+- Band Power
+- Spectral Entropy
+
 Time-Frequency Domain Features
 
-Discrete Wavelet Transform (DWT)
-Features calculated from combinations of electrodes
+- Discrete Wavelet Transform (DWT)
+- Features calculated from combinations of electrodes
 
-Differential Asymmetry
-Magnitude Squared Coherence Estimate
+- Differential Asymmetry
+
+- Magnitude Squared Coherence Estimate
