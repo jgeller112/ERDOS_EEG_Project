@@ -22,10 +22,32 @@ cd FullData/
 ## Cleaning up
 #rm co*.tar
 
+#ls -d co* > dirName.dat
+#while read fileName; do
+#  cd $fileName
+#  echo "Unziping file "$fileName
+#  gzip -d *.gz
+#  cd ..
+#done <dirName.dat
+
+
 ls -d co* > dirName.dat
-while read fileName; do
-  cd "Unziping file "$fileName
-  #echo `pwd`
-  gzip -d *.gz
+count=1
+while read fileName
+do
+  cd $fileName
+  echo "Working on dir "$fileName
+
+  ls *rd* > inputFiles.dat
+  while read fileIn
+  do
+      if [ $count -eq 1 ]
+      then
+        cat $fileIn > ../fullData.dat
+        count=2
+      fi
+      cat $fileIn >> ../fullData.dat
+  done < inputFiles.dat
+
   cd ..
 done <dirName.dat
