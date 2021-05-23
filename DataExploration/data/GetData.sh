@@ -8,27 +8,27 @@
 ## Unziping
 #mkdir FullData
 cd FullData/
-#mv ../eeg_full.tar .
-#tar -xvf eeg_full.tar
-#gzip -d co2*
-#gzip -d co3*
+cp ../eeg_full.tar .
+tar -xvf eeg_full.tar
+
+gzip -d co*
 
 ## Untar all files
-#for f in co*.tar
-#do
-#    tar -xvf $f
-#done
+ls co*.tar > fileName.dat
+while read file
+do
+    tar -xvf $file
+    ## Cleaning up
+    rm $file
+done < fileName.dat
 
-## Cleaning up
-#rm co*.tar
-
-#ls -d co* > dirName.dat
-#while read fileName; do
-#  cd $fileName
-#  echo "Unziping file "$fileName
-#  gzip -d *.gz
-#  cd ..
-#done <dirName.dat
+ls -d co* > dirName.dat
+while read fileName; do
+  cd $fileName
+  echo "Unziping file "$fileName
+  gzip -d *.gz
+  cd ..
+done <dirName.dat
 
 
 ls -d co* > dirName.dat
