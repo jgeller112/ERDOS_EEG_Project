@@ -3,10 +3,10 @@
 ## Script to download the data
 
 ## Downloading the full data here (commet it if it has already been downloaded)
-#wget https://archive.ics.uci.edu/ml/machine-learning-databases/eeg-mld/eeg_full.tar
+wget https://archive.ics.uci.edu/ml/machine-learning-databases/eeg-mld/eeg_full.tar
 
 ## Unziping
-#mkdir FullData
+mkdir FullData
 cd FullData/
 cp ../eeg_full.tar .
 tar -xvf eeg_full.tar
