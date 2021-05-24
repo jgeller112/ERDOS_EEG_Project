@@ -3,7 +3,7 @@
 ## Script to download the data
 
 ## Downloading the full data here (commet it if it has already been downloaded)
-wget https://archive.ics.uci.edu/ml/machine-learning-databases/eeg-mld/eeg_full.tar
+#wget https://archive.ics.uci.edu/ml/machine-learning-databases/eeg-mld/eeg_full.tar
 
 ## Unziping
 mkdir FullData
@@ -31,7 +31,7 @@ while read fileName; do
 done <dirName.dat
 
 
-ls -d co* > dirName.dat
+ls -d co* | sort -R | sort -R > dirName.dat ## later I want both the "a" and "c" groups
 count=1
 while read fileName
 do
