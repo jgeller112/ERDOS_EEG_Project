@@ -49,6 +49,10 @@ The power spectral density of two individual subjects, one from the control grou
 ![PSD_alc](https://user-images.githubusercontent.com/35704788/118384051-2e07fd80-b5d1-11eb-8061-9b308fd141ff.png)
 ![PSD_cont](https://user-images.githubusercontent.com/35704788/118384062-3d874680-b5d1-11eb-8d46-834a7e069a07.png)
 
+# Figure 5
+The average sensor voltage for each individual sensor, for both the alcoholic and the control group. Here is an example for the S1 obj condition
+![Condition_S1 obj_AllSensors](https://user-images.githubusercontent.com/8534254/119421653-30eba800-bccd-11eb-8559-577b32e3c213.png)
+
 # Features 
 
 Features to be extracted per subject per trial per channel
